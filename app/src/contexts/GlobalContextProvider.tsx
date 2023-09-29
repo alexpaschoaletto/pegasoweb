@@ -109,7 +109,9 @@ export default function GlobalProvider(props: GlobalProviderProps) {
                 setSequence(partsOfMessage);
             } else {
                 switch(msgReceived.type){
-                    case 'bind-success': setConnection(prev => ({...prev, robot: true})); break;
+                    case 'bind-success': setConnection(prev => ({...prev, robot: true}));
+                        socket.sendMessageToRobot(getDummyStatusCommand());
+                        break;
                     case 'unbind-success': setConnection(prev => ({...prev, robot: false})); break;
                     case 'bind-error': setConnection(prev => ({...prev, robot: false})); break;
                     case 'bind-recover': 
