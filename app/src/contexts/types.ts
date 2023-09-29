@@ -23,7 +23,7 @@ export type msgType = {
   };
 
 export type credentials = {
-    name: string;
+    name: string | undefined;
     password: string;
 }
 
