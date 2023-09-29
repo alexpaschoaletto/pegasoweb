@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useState, useEffect } from 'react';
-import { getDummyStatusCommand, getEndMessage, getPositionMessage, getStartMessage } from '../lib/commands';
-import { INFINITE_LENGTH, SERVER, PORT } from './constants';
+import { getDummyStatusCommand } from '../lib/commands';
+import { SERVER, PORT } from './constants';
 import { colors } from '../colors';
 import { connections, msgType } from './types';
 import SocketConnection from '../lib/socket';

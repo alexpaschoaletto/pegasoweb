@@ -89,7 +89,7 @@ export default function Controller(){
 
     return (
         <main>
-            <div className={styles.background} style={{height: window.innerHeight}}>
+            <div className={styles.background} style={{height:'100vh'}}>
                 <div className={styles.inputContainer}>
                     <div className={styles.section}>
                         <div className={styles.status}>

@@ -53,7 +53,7 @@ export default function SettingsPage() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.background} style={{height: window.innerHeight}}>
+      <div className={styles.background} style={{height: '100vh'}}>
         <div className={styles.mainContainer}>
           <h1 className={styles.title}>
             Vincular um dispositivo
