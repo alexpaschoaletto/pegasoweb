@@ -78,7 +78,10 @@ export default function GlobalProvider(props: GlobalProviderProps) {
     const socket = SocketConnection.getInstance();
 
     useEffect(() => {
-        socket.set('app', {name: 'Pegaso Robot Controller', password: 'some password I have to change later'});
+        socket.set('app', {
+            name: 'Pegaso Robot Controller',
+            password: `${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
+        });
         socket.connect(`${SERVER}:${PORT}`, setConnectionWithServer);
         socket.addEventListener('msg-from-server', (msg: string) => {
             const content: msgType = JSON.parse(msg);
